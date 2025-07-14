@@ -6,34 +6,41 @@ export class AdminActions extends LitElement {
     static styles = [
         css`
             :host
-    {
-    display: flex;
-    flex-direction: column;
-    /* margin-left: 5%; */
-    border: solid 3px black;
-    /* width: 90%; */
-    padding: 2em;
-    }
-    .title{
-    text-align: center
-    }
-    .config{
-    text-align:right;
-    margin-right:15px;
-    }
-    table{
-    display:table;
-    border-collapse:collapse;
-    border-spacing: 0;
-    margin-top: 15px;
-    }
-    tr, th, td{
-    border: solid 1px;
-    text-align: center;
-    }
-    .hidden{
-    display:none;
-    }
+            {
+            display: flex;
+            flex-direction: column;
+            /* margin-left: 5%; */
+            border: solid 3px var(--md-primary-text-color);
+            /* width: 90%; */
+            padding: 2em;
+            color:var(--md-primary-text-color)
+            }
+        /* :host([darkmode=true]){
+
+                    color:white;
+                    border-color:white;
+                
+            } */
+            .title{
+            text-align: center
+            }
+            .config{
+            text-align:right;
+            margin-right:15px;
+            }
+            table{
+            display:table;
+            border-collapse:collapse;
+            border-spacing: 0;
+            margin-top: 15px;
+            }
+            tr, th, td{
+            border: solid 1px;
+            text-align: center;
+            }
+            .hidden{
+            display:none;
+            }
         `
     ];
     @property() token?: string    //$STORE.auth.accessToken
